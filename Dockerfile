@@ -3,6 +3,8 @@ FROM debian:jessie
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r redis && useradd -r -g redis redis
 
+RUN env
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		ca-certificates \
 		wget \
